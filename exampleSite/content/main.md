@@ -3,63 +3,78 @@ weight: 10
 title: API Reference
 ---
 
-# Introduction
+# Admin applications
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+## certificate_issuer
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Container responsible for issuing certificates. Required in cloud systems
 
-**This example API documentation page was created with [DocuAPI](https://github.com/bep/docuapi/), a multilingual documentation theme for the static site generator [Hugo](http://gohugo.io/).** 
+### image
 
-# Authentication
+<aside class="success">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</aside>
 
-> To authorize, use this code:
+### infrastructure_image
 
-```go
-package main
+<aside class="warning">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</aside>
 
-import "github.com/bep/kittn/auth"
+### timestamp
 
-func main() {
-	api := auth.Authorize("meowmeowmeow")
+> Example:
 
-	// Just to make it compile
-	_ = api
+```json
+{
+  "image": "image"
 }
 ```
 
-```ruby
-require 'kittn'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+# Services
+
+## logs
+
+> Example:
+
+```json
+{
+    "logs": {
+        "timestamp": 123.45,
+        "password": "cGFzc3dvcmQK",
+        "collect_containers_logs_regex": ".*",
+        "remove_rotated_logs": {
+            "host": false,
+            "containers": false
+        },
+        "collect_host_logs": true,
+        "execution": {
+            "type": "oneshot",
+            "exit_timeout": 1200
+        }
+    }
+}
 ```
 
-```python
-import kittn
+Logs collection configuration
 
-api = kittn.authorize('meowmeowmeow')
+Field | Type   | Default | Description
+--------- |---------|---------| -----------
+password | string  | -       | Base64 encoded password
+collect_host_logs | boolean | -       | Should logs from host be collected
+
+## ntp
+
+> Example:
+
+```json
+{
+  "ntp": {
+    "servers": [
+      "1.2.3.9",
+      "6.5.3.33"
+    ]
+  }
+}
 ```
 
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
+NTP configuration. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
