@@ -53,14 +53,6 @@
         </div>
       {{ end }}
       {{ block "toc" . }}{{ end }}
-      {{ if .IsTranslated }}
-        <ul class="toc-footer">
-          <li class="toc-h1">
-            {{ T "translations" (len .Translations ) }}
-          </li>
-          {{ partial "translations.html" . }}
-        </ul>
-      {{ end }}
       {{ with .Site.Params.toc_footers }}
         <ul class="toc-footer">
           {{ range . }}
