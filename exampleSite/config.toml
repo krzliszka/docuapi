@@ -53,7 +53,7 @@ name = "Python"
 [languages.en]
 languageName = "English"
 weight = 2
-title = "DocuAPI Example Site"
+title = "Test doc site"
 
 # Left sidebar footer items. Use HTMl or Markdown.
 toc_footers = [

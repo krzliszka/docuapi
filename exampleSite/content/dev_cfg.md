@@ -13,8 +13,8 @@ title: DEV_CFG
 import pandas
 
 dataset = {
-  'cars': ["BMW", "Volvo", "Ford"],
-  'passings': [3, 7, 2]
+  'cars': ["BMW", "Volvo"],
+  'passings': [3, 7]
 }
 
 var = pandas.DataFrame(dataset)
