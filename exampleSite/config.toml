@@ -31,21 +31,21 @@ search = true
 maxMenuDepth = 3 # (optional) available options are: 1, 2, or 3 (default: 2)
   
 # Configure the language example tabs.
-[[params.language_tabs]]
-key = "go"
-name = "Go" 
-[[params.language_tabs]]
-key = "shell"
-name = "Shell" 
-[[params.language_tabs]]
-key = "ruby"
-name = "Ruby"
+#[[params.language_tabs]]
+#key = "go"
+#name = "Go"
+#[[params.language_tabs]]
+#key = "shell"
+#name = "Shell"
+#[[params.language_tabs]]
+#key = "ruby"
+#name = "Ruby"
 [[params.language_tabs]]
 key = "python"
 name = "Python"
-[[params.language_tabs]]
-key = "javascript"
-name = "Javascript"
+#[[params.language_tabs]]
+#key = "javascript"
+#name = "Javascript"
 
 #Languages 
 [languages]
@@ -56,20 +56,15 @@ weight = 2
 title = "DocuAPI Example Site"
 
 # Left sidebar footer items. Use HTMl or Markdown.
-toc_footers = [ 
-"<a href='#'>Sign Up for a Developer Key</a>",
-"Documentation Powered by [DocuAPI](https://github.com/bep/docuapi)",
-"Hugo Theme by [bep](https://github.com/bep)"
+toc_footers = [
+"CMEP DEV_CFG",
+
 ]
 [languages.en.blackfriday]
 angledQuotes = false
 hrefTargetBlank = true
 
 
-[languages.nn]
-languageName = "Nynorsk"
-weight = 1
-title = "DocuAPI-døme"
 
 # Left sidebar footer items. Use HTMl or Markdown.
 toc_footers = [ 
